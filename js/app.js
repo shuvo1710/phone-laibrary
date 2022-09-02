@@ -101,4 +101,4 @@ const displayPhoneDetail = phone =>{
   `;
 }
 
-loadData('apple');
+// loadData('');
