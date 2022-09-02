@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Library</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <section>
+        <div class="container pt-5 text-center">
+          <input
+            id="search-field"
+            class="w-50"
+            type="text"
+            placeholder="Search your Phone"
+          />
+          <button id="search-btn" class="btn btn-warning">search</button>
+        </div>
+      </section>
+      <section>
+        <h1
+          id="no-found"
+          class="fs-3 fw-bolder text-primary text-center d-none"
+        >
+          No Found Phone
+        </h1>
+      </section>
+      <section class="container">
+        <h1 class="fs-1 fw-bold text-info text-center pt-3 pb-5">
+          Welcome To Phone Library
+        </h1>
+      </section>
+    </header>
+    <main>
+      <section class="container">
+        <div
+          id="phones-container"
+          class="row row-cols-1 row-cols-md-3 g-4"
+        ></div>
+        <div id="show-all" class="text-center pt-5 pb-5 d-none">
+          <button id="btn-show-all" class="btn btn-primary">Show More</button>
+        </div>
+      </section>
+      <!-- modal start -->
+      <section>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moda-phone-details">
+          Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="moda-phone-details"
+          tabindex="-1"
+          aria-labelledby="moda-phone-detailsLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="moda-phone-detailsLabel">Modal title</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body" id="moladdetailbody">...</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- modal end -->
+      <section>
+        <div id="loader" class="d-flex justify-content-center d-none">
+          <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
